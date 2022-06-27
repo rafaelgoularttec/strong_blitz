@@ -1,0 +1,229 @@
+/* 
+  AUTOR: RAFAEL GOULART
+  DISCORD PESSOAL: twitch.tv/livesdorafinha#3506
+  DISCORD DA MINHA CIDADE: https://discord.gg/ueYQQ9NAst
+*/
+/* RESET GLOBAL */
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+body {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+/* REPETIÇÃO */
+.menu-blitz,
+#menu_principal
+{
+  gap: 10px;
+}
+/* RESET SCROLL */
+::-webkit-scrollbar {
+  width: 2px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(84deg, #ebebeb 15%,#EBEBEB 89%);
+  /* border-radius: 10px; */
+}
+::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(13deg, #EBEBEB 14%,#ebebeb 64%);
+}
+::-webkit-scrollbar-track{
+  background: #63636310;
+  /* border-radius: 6px; */
+  box-shadow: inset 6px 10px 12px #b0b0b075;
+}
+
+.menu-blitz {
+  display: none;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  width: 890px;
+  min-width: 890px;
+  height: 530px;
+  max-height: 530px;
+  border-radius: 7px;
+  border: 20px solid rgb(32, 32, 32);
+  padding-bottom: 10px;
+}
+.header
+{
+  width: 100%;
+  background-color: #00C9D5;
+}
+#menu_principal
+{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.menu-blitz .titulo {
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  color: #272727cb;
+  display: flex;
+  align-items: center;
+}
+.titulo img
+{
+  width: 60px;
+  margin-right: 10px;
+}
+.btns {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+.clear-all > span
+{
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  background-image: url(imgs/icon_btn_clear.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.clear-all {
+  position: absolute;
+  width: 130px;
+  height: 100%;
+  border: 0;
+  right: 0;
+  padding: 10px;
+  outline: none; /* none */
+  background-color: transparent;
+  color: white;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #272727cb;
+}
+
+.clear-all:hover {
+  background-color: rgb(189, 25, 58);
+  cursor: pointer;
+}
+
+.item {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: all 0.2s;
+  border-radius: 8px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: #42c3ca;
+}
+
+.menu-blitz .item:hover {
+  transform: scale(1.03);
+}
+
+.menu-blitz .item img {
+  height: 100%;
+}
+.menu-blitz .item .buttons {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-blitz .item .buttons button {
+  width: calc(200px / 2);
+  padding: 10px 15px;
+  border: 0;
+  outline: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.colocar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: rgba(59, 177, 79, 0.438);
+}
+.colocar > span
+{
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(imgs/icon_btn_add.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  filter: invert(1);
+}
+.colocar:hover {
+  background-color: rgb(32, 121, 47);
+  cursor: pointer;
+}
+
+.retirar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  background-color: rgba(255, 2, 53, 0.452);
+}
+.retirar > span
+{
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(imgs/icon_btn_rem.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  filter: invert(1);
+}
+.retirar:hover {
+  background-color: rgb(255, 0, 51);
+  cursor: pointer;
+}
+
+.info {
+  width: 300px;
+  position: absolute;
+  bottom: 10px;
+  padding: 5px;
+  color: rgb(219, 219, 219);
+  font-weight: 800;
+  border-radius: 5px;
+  font-size: 15px;
+  display: none; /* none */
+  left: 15%;
+}
+
+.info .obj {
+  color: rgb(255, 77, 77);
+}
+
+.info span {
+  color: rgb(255, 77, 77);
+}
